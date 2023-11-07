@@ -17,8 +17,54 @@
             margin-top:0.5rem;
         }
     </style>
+    <style>
+        /* Add your loading animation styles here */
+        #loading-animation {
+            display: none; /* Initially hide the loading animation */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 9999;
+        }
+    
+        #loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #f3f3f3; /* Light grey */
+            border-top: 5px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+    
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    
   <script>
         // Function to make an AJAX GET request and handle the response
+        var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://gjcm1.onrender.com', true);
+            xhr.open('GET', 'https://gjcm1.onrender.com', true);
+            xhr.open('GET', 'https://gjcm1.onrender.com', true);
+            xhr.open('GET', 'https://gjcm1.onrender.com', true);
+            xhr.open('GET', 'https://gjcm1.onrender.com', true);
+            xhr.open('GET', 'https://gjcm1.onrender.com', true);
+            xhr.open('GET', 'https://gjcm1.onrender.com', true);
+            xhr.open('GET', 'https://gjcm1.onrender.com', true);
+            xhr.open('GET', 'https://gjcm1.onrender.com', true);
+            xhr.open('GET', 'https://gjcm1.onrender.com', true);
+            xhr.open('GET', 'https://gjcm1.onrender.com', true);
+            xhr.open('GET', 'https://gjcm1.onrender.com', true);
+
         function makeAjaxRequest() {
             var xhr = new XMLHttpRequest();
             xhr.open('GET', 'https://gjcm1.onrender.com', true);
@@ -40,6 +86,49 @@
         // Call the function when the page loads
         window.addEventListener('load', makeAjaxRequest);
     </script>
+    
+     <script>
+        // Function to show the loading animation
+        function showLoadingAnimation() {
+            document.getElementById('loading-animation').style.display = 'block';
+        }
+
+        // Function to make an AJAX GET request and handle the response
+        function makeAjaxRequest() {
+            showLoadingAnimation(); // Show the loading animation
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://gjcm1.onrender.com', true);
+            console.log("Requesting");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        // If the request is successful, redirect to the URL
+                       location.href = 'https://gjcm1.onrender.com';
+                    } else {
+                        console.error('Failed to load the page.');
+                    }
+                }
+            };
+            xhr.send();
+        }
+ function handleAnchorClick(event) {
+            event.preventDefault(); // Prevent the default behavior
+            console.log("Hello World");
+            // Add your custom logic here
+            makeAjaxRequest(); // For example, call your AJAX function
+
+            return false;
+        }
+        // Add event listeners to all anchor tags to call the makeAjaxRequest function
+        document.addEventListener('DOMContentLoaded', function() {
+            var anchorTags = document.getElementsByTagName('a');
+            for (var i = 0; i < anchorTags.length; i++) {
+                anchorTags[i].addEventListener('click', handleAnchorClick);
+            }
+        });
+    </script>
+    
 </head>
 <body class="bg-gray-100">
     <header class="bg-green-400 text-white py-4 mt-2 rounded-lg">
@@ -48,6 +137,9 @@
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-semibold rounded-lg">GOVERNMENT PRE - UNIVERSITY COLLEGE MUTHINAKOPPA</h1>
         </div>
     </header>
+    <div id="loading-animation">
+        <div id="loading-spinner"></div>
+    </div>
     <nav class="bg-purple-400 text-white py-2 mt-2 rounded-lg">
         <div class="container mx-auto">
             <ul class="flex flex-wrap justify-center space-y-1 sm:space-x-4 sm:space-y-2">
@@ -60,7 +152,7 @@
                 </li>
                
                 <li class="w-full sm:w-auto rounded-lg border p-2">
-                    <a href="/details">Faculty Details<br>ಸಿಬ್ಬಂದಿ ವಿವರಗಳು</a>
+                    <a href="https://GOOGLE.COM">Faculty Details<br>ಸಿಬ್ಬಂದಿ ವಿವರಗಳು</a>
                 </li>
                 <li class="w-full sm:w-auto rounded-lg border p-2">
                     <a href="/lecturerlogin">Lecturer Login<br>ಉಪನ್ಯಾಸಕರ ಲಾಗಿನ್</a>
