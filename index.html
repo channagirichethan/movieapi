@@ -22,7 +22,7 @@
         function makeAjaxRequest() {
             var xhr = new XMLHttpRequest();
             xhr.open('GET', 'https://gjcm1.onrender.com', true);
-            
+            console.log("REQUSTING");
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4) {
                     if (xhr.status === 200) {
